@@ -13,7 +13,7 @@ class SGrade {
 		int totalGr;
 		int GPA;
 	public:
-	
+
 		void input() {
 			cout << "Id:" ;
 			cin >> Id;
@@ -52,24 +52,38 @@ class SGrade {
 				} else if (isdigit(Grade[0])) {
 					cout << "enter correct mark. or check out help page!\n";
 					return;
-						
+
 				}
-				totalGr += sum;	
+				totalGr += sum;
 			}
 		}
-			void disp(){
-				GPA = totalGr/totalCrHr;
-				cout << "Total Credit: " << totalCrHr<< endl;
-				cout << "Total Grade: " << totalGr<< endl;
-				cout << "GPA: " << GPA;
-			}
-			void help(){
-				cout << "HOW TO USE GPA CALCULATOR";
-				cout << "[1] to use the calculator you have to know the credit hour of the course. \n";
-				cout << "[2] your grade have to be inputed using the method of ABCD grading system. \n";
-				}
+		void disp() {
+			GPA = totalGr/totalCrHr;
+			cout << "Total Credit: " << totalCrHr<< endl;
+			cout << "Total Grade: " << totalGr<< endl;
+			cout << "GPA: " << GPA;
+		}
+		void help() {
+			cout << "GPA Calculator - Help" << endl;
+			cout << "---------------------" << endl;
+			cout << "To use the GPA Calculator, follow these steps:" << endl;
+			cout << "1. Enter the student's ID." << endl;
+			cout << "2. Enter the number of courses taken." << endl;
+			cout << "3. For each course, enter the course name, credit hour, and grade." << endl;
+			cout << "4. The program will calculate the GPA based on the entered information." << endl;
+			cout << endl;
+			cout << "Grade System:" << endl;
+			cout << "--------------" << endl;
+			cout << "Use the following grades when entering course grades:" << endl;
+			cout << "- A+, A, A-, B+, B, B-, C+, C, C-, D, F" << endl;
+			cout << "The corresponding grade points will be used for GPA calculation." << endl;
+			cout << endl;
+			cout << "Note: Only enter the exact grade as shown above. The input is case-sensitive." << endl;
+		}
 
-};SGrade g;
+
+};
+SGrade g;
 
 
 
